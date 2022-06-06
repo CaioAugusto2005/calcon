@@ -41,7 +41,7 @@ input[type=button]{
 }
 
 div#calculadora{ 
-    box-shadow: 0 0 20px rgb(135, 11, 151);
+    box-shadow: 0 0 20px rgb(168, 35, 185);
 }
 
 div#calculadora div {
@@ -49,15 +49,15 @@ div#calculadora div {
 }
 
 div#calculadora div input:nth-child(4) {
-    background: #5e2270;
+    background: #9359f0;
 }
 
 div#quarta input:nth-child(1) {
-    background: #5e2270;
+    background: #9359f0;
 }
 
 div#quarta input:nth-child(3){
-    background:  #5e2270;
+    background:  #9359f0;
 }
 
 input[type=button]:hover{
