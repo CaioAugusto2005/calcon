@@ -28,6 +28,7 @@ p{
 input{ 
     margin: 2px;
     border: none; border-radius: 3px;
+    background-color: white;
 }
 input[type=text]{ 
     width:calc(99.2% - 4px); 
