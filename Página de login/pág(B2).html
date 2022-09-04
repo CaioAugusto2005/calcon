@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pág(B2)</title>
+    <style>
+        :root{
+            --color-white: #fff;
+            --color-dark1: rgb(39, 39, 39);
+            --color-dark2: #2d2d2d;
+            --color-dark3: #414141;
+            --color-dark4: #1c1c1c;
+            --color-dark5: #343434;
+            --color-blue1: #0004df;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--color-white);
+            background-image: url(https://images6.alphacoders.com/123/thumb-1920-1232369.jpg);
+            background-image: no-repeat;
+            background-position: center  0%;
+        }
+        .img_logo_header{
+            width: 45px;
+        }
+        .header,
+        .navigation_header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .header{
+            background-image: url(https://i.pinimg.com/736x/f2/f9/0c/f2f90ced87c065fb9b754a5395024a2d.jpg);
+            background-image: no-repeat;
+            background-position: center ;
+            justify-content: space-between;
+            padding: 0 10%;
+            height: 3.5em;
+            box-shadow: 1px 1px 4px var(--color-dark4);
+        }
+        .navigation_header{
+            gap: 3em;
+            z-index: 2;
+        }
+        .content{
+            padding-top: 5em;
+            text-align: center;
+            height: 100vh;
+            transition: 1s;
+        }
+        .navigation_header a{
+            text-decoration: none;
+            color: var(--color-white);
+            transition: 1s;
+            font-weight: bold;
+        }
+        .navigation_header a:hover{
+            color: var(--color-white);
+        }
+        .active{
+            background: var(--color-blue1);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn_icon_header{
+            background: transparent;
+            border: none;
+            color: var(--color-white);
+            cursor: pointer;
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .navigation_header{
+                position: absolute;
+                flex-direction: column !important;
+                top: 0;
+                background: var(--color-dark5);
+                height: 100%;
+                width: 35vw;
+                padding: 1em;
+                animation-duration: 1s;
+                margin-left: -100vw;
+            }
+            .btn_icon_header{
+                display: block;
+            }
+        }
+        @keyframes showSidebar {
+            from {margin-left: -100vw;}
+            to {margin-left: -10vw;}
+        }
+
+        .img1{
+            width: 95%;
+            height: 98%;
+        }
+         
+        .conjunto{
+            display: flex;
+            width: 100%;
+            height: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 20px;
+            color: black;
+        }
+
+        .box1{
+            margin-right: 1%;
+            margin-left: 1%;
+            width: 48%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.7;
+            border-radius: 20px;
+        }
+
+        .box2{
+            margin-right: 1%;
+            margin-left: 1%;
+            width: 48%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.7;
+            border-radius: 20px;
+        }
+
+        #p1{
+            font-family: 'Special Elite', cursive;
+            text-align: center    
+          
+        }
+         
+        .box3{
+            margin: auto;
+            width: 98%;
+            height: 180px;
+            background-color: #fff;
+            opacity: 0.7;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 20px;
+            color: black;
+        }
+
+        .box4{
+            margin: auto;
+            width: 98%;
+            height: 280px;
+            background-color: #fff;
+            opacity: 0.7;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 20px;
+            color: black;
+
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <div class="logo_header">
+            <a href="login.html"><img src="mudar de conta.png" alt="Logo GN" class="img_logo_header"></a>
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <a href="home(B1).html" >ESCOLA</a> 
+            <a href="" class="active">ANIMES</a>
+            <a href="pág(B3).html">MÚSICAS</a>
+            
+        </div>
+    </div>
+    <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        
+<div class="conjunto">        
+        <div class="box1"> 
+        <h2 id="p1">Pandemia</h2>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Durante a pandemia eu comecei a gostar de animações japonesas (Animes) e tudo que envolve essa cultura no Brasil, na página ao lado eu 
+            falarei mais sobre a cultura geek, que consiste em todo o conteúdo derivado das animações japonesas aqui no Brasil, como músicas sobre 
+            os personagens, bonecos de ação entre outros, esse é um cenário que vem se popularizando muito nos últimos anos.
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Existem diversos animes dos mais variados gêneros, mas o meu estilo favorito é o "Shonen" , esse estilo é caracterizado pela presença 
+            de poderes e sistemas de poder dentro da obra, seria parecido com os desenhos de super heróis que nós já conhecemos aqui no ocidente.
+            Dentro desse gênero os meus animes favoritos são:
+          
+        </p>
+        </div>
+        <div class="box2">
+            <h2 id="p1">ONE PIECE</h2>
+            <p class="p1">
+                &nbsp;&nbsp;&nbsp;&nbsp;One Piece é uma  série de mangá escrita e ilustrada por Eiichiro Oda. A série centra-se em Monkey D. Luffy, um jovem que, 
+                inspirado por seu ídolo de infância  e poderoso pirata Shanks, "o Ruivo", sai em uma jornada do mar East Blue para encontrar o famoso 
+                tesouro One Piece e proclamar-se o Rei dos Piratas.
+            </p>
+
+        </div>
+</div>
+
+<div class="">
+    <div class="box3">
+                <h2 id="p1">Naruto</h2>
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;   Naruto: Naruto é uma série de mangá escrita e ilustrada por Masashi Kishimoto, que conta a história de Naruto Uzumaki, um jovem ninja 
+                    que constantemente procura por reconhecimento e sonha em se tornar Hokage, o ninja líder de sua vila. A história é dividida em duas 
+                    partes, a primeira parte se passa nos anos da pré-adolescência de Naruto, e a segunda parte se passa em sua adolescência.
+    
+                </p>
+    </div>
+    </div>
+    
+
+    <div class="">
+<div class="box4">
+            <h2 id="p1">Kimetsu no Yaiba</h2>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;Kimetsu no Yaiba ou Demon Slayer: é uma série japonesa de mangá shōnen escrita e ilustrada por Koyoharu Gotōge. Ambientada no Japão 
+                durante o Período Taishō (1912-1926), a história gira ao entorno de Tanjirō Kamado, um garoto bondoso e inteligente que vive junto 
+                com sua mãe e seus irmãos, ganhando dinheiro vendendo carvão, assim como seu falecido pai. Certo dia, ao voltar para casa após ter 
+                ido a uma cidade vender carvão, Tanjiro descobre que toda sua família foi atacada por onis, sendo que uma de suas irmãs, Nezuko, é 
+                a única que sobreviveu ao ataque. Nezuko então passa a ser um oni, mas ela surpreendentemente ainda demonstra sinais de emoções e 
+                pensamentos humanos. 
+                <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Tanjirō decide então se tornar um caçador de onis, e com a ajuda de Nezuko, passa a sair em jornadas pelo 
+                Japão a fim de impedir que a mesma tragédia que afetou sua família aconteça com outras pessoas, enquanto que ele busca uma maneira 
+                de tornar Nezuko humana novamente.
+            </p>
+</div>
+</div>
+
+    </div>
+
+</body>
+<script>
+    var header           = document.getElementById('header');
+    var navigationHeader = document.getElementById('navigation_header');
+    var content          = document.getElementById('content');
+    var showSidebar      = false;
+
+    function toggleSidebar()
+    {
+        showSidebar = !showSidebar;
+        if(showSidebar)
+        {
+            navigationHeader.style.marginLeft = '-10vw';
+            navigationHeader.style.animationName = 'showSidebar';
+            content.style.filter = 'blur(2px)';
+        }
+        else
+        {
+            navigationHeader.style.marginLeft = '-100vw';
+            navigationHeader.style.animationName = '';
+            content.style.filter = '';
+        }
+    }
+
+    function closeSidebar()
+    {
+        if(showSidebar)
+        {
+            showSidebar = true;
+            toggleSidebar();
+        }
+    }
+
+    window.addEventListener('resize', function(event) {
+        if(window.innerWidth > 768 && showSidebar) 
+        {  
+            showSidebar = true;
+            toggleSidebar();
+        }
+    });
+
+</script>
+</html>

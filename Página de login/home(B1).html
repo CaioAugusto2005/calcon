@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home(B1)</title>
+    <style>
+        :root{
+            --color-white: #fff;
+            --color-dark1: rgb(39, 39, 39);
+            --color-dark2: #2d2d2d;
+            --color-dark3: #414141;
+            --color-dark4: #1c1c1c;
+            --color-dark5: #343434;
+            --color-green: rgb(48, 148, 48);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://media.istockphoto.com/photos/green-defocused-blurred-motion-abstract-backgrounds-picture-id1201320492?k=20&m=1201320492&s=612x612&w=0&h=QqVRLFsTSHH_434msbK43yFEZDYjMJZoVp-J2N_3Cx8=);
+            background-image: no-repeat;
+            background-position: center ;
+            color: var(--color-white);
+        }
+        .img_logo_header{
+            width: 45px;
+        }
+        .header,
+        .navigation_header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .header{
+            background-image: url(https://i.pinimg.com/736x/5e/43/76/5e43762a70377899e9933c95f671d01a.jpg);
+            background-image: no-repeat;
+            background-position: center ;
+            justify-content: space-between;
+            padding: 0 10%;
+            height: 3.5em;
+            box-shadow: 1px 1px 4px var(--color-dark4);
+        }
+        .navigation_header{
+            gap: 3em;
+            z-index: 2;
+        }
+        .content{
+            padding-top: 5em;
+            text-align: center;
+            height: 100vh;
+            transition: 1s;
+        }
+        .navigation_header a{
+            text-decoration: none;
+            color: var(--color-white);
+            transition: 1s;
+            font-weight: bold;
+        }
+        .navigation_header a:hover{
+            color: var(--color-white);
+        }
+        .active{
+            background: var(--color-green);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn_icon_header{
+            background: transparent;
+            border: none;
+            color: var(--color-white);
+            cursor: pointer;
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .navigation_header{
+                position: absolute;
+                flex-direction: column !important;
+                top: 0;
+                background: var(--color-dark5);
+                height: 100%;
+                width: 35vw;
+                padding: 1em;
+                animation-duration: 1s;
+                margin-left: -100vw;
+            }
+            .btn_icon_header{
+                display: block;
+            }
+        }
+        @keyframes showSidebar {
+            from {margin-left: -100vw;}
+            to {margin-left: -10vw;}
+        }
+        
+        
+        #bio{
+            margin: auto;
+            
+        }
+        #n1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        img{
+            margin: auto;
+        }
+        p{
+            text-align: center;
+
+        }
+        
+        .conjunto{
+            display: flex;
+            width: 100%;
+            height: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 20px;
+        }
+
+        .conjunto2{
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            height: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 20px;
+            
+        }
+
+        .img1{
+            width: 95%;
+            height: 98%;
+            border: 5px solid green;
+        }
+
+        .box1{
+            margin-left: 8px;
+            margin-top: 5px;
+            width: 48%;
+            height: 100%;
+                
+        
+        }
+
+        .box2{
+            width: 50%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgb(53, 49, 117), rgb(20, 172, 78));
+            border-radius: 20px;
+        }
+
+        .box3{
+            margin: auto;
+            width: 98%;
+            height: 200px;
+            background-image: linear-gradient(to right, rgb(53, 49, 117), rgb(20, 172, 78));
+            border-radius: 20px;
+        }
+
+        p{
+            text-align: justify;
+            padding: 10px;;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <div class="logo_header">
+            <a href="login.html"><img src="mudar de conta.png" alt="Logo GN" class="img_logo_header"></a>
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <a href="#" class="active">ESCOLA</a>
+            <a href="pág(B2).html">ANIMES</a>
+            <a href="pág(B3).html">MÚSICAS</a>
+            
+        </div>
+    </div>
+    <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        <h1 id="bio">Onde Estudo?</h1>
+    
+        <div class="conjunto">        
+            <div class="box1"> 
+                <img class="img1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAw1BMVEX///9jGmIAi88AgswAhs1cAFsAic4AgMtUAFPt+PxYAFdhFWBXAFZTAFJdAFwAg8zQ5vSKweRIpNnF4/PW7PZgEF/59vnw6vDX6fWZxeZtsN2u1e2niqaczekym9WjzembeJqAueHPv87Jt8iPZ46VcJTo3+eggJ+wlq+IW4e9p7z07/SAUH/m3OW+q761nLRvL212PnXd0d1pJmgAd8iDU4JzOHHMvMyoh6aOYox6Rnnl9PoAktJrJWpIAEY/AD5AodcDQfNaAAAUBklEQVR4nO1dDXuayBYeE8dQEN0mBTYJzRIURY1icGOjTXvz/3/VPWe+QZLY1gTvfXifZ7tVBpiX8zlnDpaQBg0aNGjQoEGDBg0aNGjQoEGDBg0aNGjQoEGDBg0aNGjQoMH/HQbTbbz34BmJZ/47TuYdEFs29dxwv8F+4vXs7r6jjwO520K4071GT7sOjqbr/x0x+h6bMlCc7TF6wB8HUIzee2IHw5jKOT/uMXroidHO/bvP7FCwWhJ0j9FrR42uVNPBIDjw/P4Yc1cxtOZvjvb183BHFcdXlu0ODz/JP0Lc1TLcw9e0pAy9h4qjTOPpselvTzG0v709WlttRbwIuD7Y2eFn+SegmuGgfCwY94Z54ZtcKnW3wgwTfi2n9W6T/S0sle/o5qVDsyV1PDctfCecaXexeyVfsrfKF6oXIyXEbtF3DDaUsXELos2Z3XrbiisphvsY9AcikPMqRzipkM7SVMiceVNaIUJt0jStOlob4sQWTLzCo1fMWzQxsp259ZIV6mB5ZAyJ/8j1dPBopm35UmYvLc+McDNG3IuyRboTPpfHyHCW/BC+w1nGd4buWYogWKLMU7JNIlhg0EvLgpSnHBPD2SrXHtAnA7VK1P4HJTbhX8aLwJVigpg3LrlZlfD09slwPwjjXOsWhsP7RMjFSHW0D0rJTJLowrP44Vhj82IjedA7nsTt4Sfo5cbTTz60lvxIbJsM1+y7NNL5gTsnARCyTCnm8qk4yw9n8gLSLq7yQqp1MaM9rpG5KUNvgpKduA86L4W8m4nZNYL7QD2VvZaaHwAIeCidqWDorHwS9loWixm+SrGlTKaW80OrNDBcICGa6Osl2vtOFptjSE7vYUaWoZB0yJSQLxPHhqtBoyMrB4+sBENIzDIcgawFBlrsYNI9K3nhth8HFtnAsSeSixcxb8izysSIFpiFYaSnqUq8vYQ9IBjNI8ksvTf02kaXVL+qsvwLFDBSC6Ix84aYkflxpmXo3RFurTTTzuSeTBhDHvvmLjW1eo0PhNaup5yhozxNqxfOkQDMzJ/E98aMPXdC7jyUpXaxVDwZZ4XXGprhE5dP8CiEB64RPHxRkupFbc4Zjn6OVAwRlpghY3uwUExcX3goVFPf9Lx4cIaPwqq7ZMOjt20wTBlDZ0vBU94VGHrJnYMLSK273VxoLK4qB2b0xIt++2YLB1UnfLuaISgZJKKmlqL7f3CwVKU9LM1EfoNuqPg48IEgw/rTU8oZhmpZF0pHAgyXBYbOeuug8m2MkCeWg5g0lBm2PFRhr+544TOGVPtSbxiIzBIcvVPB0PJ1ubTlkS3jhct97lZbniXhogp40XxQa8QYCTtUcoHIIWXoGyU4fghH2cSwN2vO1RvrTiz2wxOaBRIs7GQ///N2CfYdwZcPVIgC0fXXwj/6pOQ7VuBFnaWvy8dgZXy53+qxZZOzdYxFE8smuvOoVoI864L5/VCaB9GApzJd3yhucxmCYXmbkWV+ReiKZ3lA1VkPqBHiRy67XO46dZbdxly3iI5lkLzEwsHO3ALD1hoskI6/mZK1RuMQFZUS+BrzIaqLcky8Tm8+zoY1WiKzP2dtysXNef2pO18UkpRWC10rnYamdXpJMEbnS1EbINWzjfjHLIAOJmE8qzFksGWCNzTlQgc84NlxVGK4Yt8+FKJCj8uqh97YmpOlUQhmF8UEd0Ci2ggyS/N6aWhy8fCDB3lKUopwyNDKi19SH5MZCIxAHHxTonejApYv4Oo496e15W6YeHsTO147RS4t+8Hr5hOTzA/2p9PKi+knDbHGD2tBz8H8ZfFTchnYeDbFuniQ55XF448Ayzo27rzoNOHJZwPazc2kjfKCKp1mJdW1gx4rDrOFpnMnF4QJD7RbVtQazKK6GOJ0vYfJoDRrKwMX1J2vDIZ2brd+/ABTK8kQpOq0ekDAQwfkOM4at+dyjz8PERwH/l2dDOmwUK1gEsRqU3duKKlzP+qiotqk7H4QXRBcMLSYk3W69t2dxZ+NTEoH6c6e3UcytH0SFbwHzWA+XRCX4WB7IQSU5RIifCnPYSfwimkwtjh7T6WAK36b+GddBJEhTHpWNENIQ/Aryzd8KU1HlrOeeMtphQhVMcZPveojSW1bbZCOeENdhhIMEx8ycu+eGGwoyNC5H3qr+7LXZWquwCRMqTxRxv9ZbXYIcZBmeSk5w/6DuAuhOzWYO3nXuYeYt0vQ2xhlfUx73EeyEJfsyY3+2so14GLseFWaNS7Lv3VbxTUtnVJnW04BOIvA6FeARI9iVpOL3XxZ2q+NYYQMd7Qugpl2J8QvyBYsdhtWGKGzGhkVQxjh3K/X6+2KH5WGWFvfAgiFPu6o3QTL9+FOacnZVrkZZ2UmLLjOdBDiqM2PBVE9/Fjlwc7L08aSROZOSVlizra82ODQG46iKGJei3uhRW0VN9tpWUE5ZXM8ZBjrBr03GKa6fWNUdS1SoxnCwse5i3diOKwRsp9zUk7Hne1O/srEZLR+lRVb9MlFtSXeWGhwejtzhlml4CLKjhMco7cbLAptNbspnbNMw1WNC+BKoWCcjqydKj3uQVS5mp4RLHbzATrN8zqrieWFgphVRpYtsmOfvTEvLpVlqGu+Ow+l/qr+oiKPRgfou/e77EF5KxlO1OXyXZXYo1/1XTGyqihCiHMnu+FwVa3Vhh1WKLFde7N7lWW1vNiNdo5gqrPrKwtNF7tZXWV338ei0hLp3N1NabDVpiptw3KbgMpwf6gr1f9OhtEVpP2gHcAyv8wQLaqSoSUVUXdeZlKYR9BlqmXo6RzGJusp+VZi6PovMZQ5jXI01kw8LpHS1ApjU14bnk3yjJRyHTbZtIqhaiuWSR1YptjpOYZXTvT63tOUwAGmZXl5G/ICQ9VJKwtaYHxit26np7oG6Bp9b64UFhgOpqV1AtuuNm1T73VLbyK36MBihVft1klNQGeSdKb+yi3rvuD7WRO/+WKGkqdKvcWqEAMnZ3gU/YmaYVc7e55qPRZycuYVtQxhaa+iv80vJXM2lDb3WkfRza5qMZBXq+UST7WK4QJdqbFk9La6yCHah2XCgx+5HdadsjGodgtItxXDLptyIQnlfl+vnuhY76oKIiK8sP4w0Q1WHy8NbYapwZbH8N0WYePtoVjvjIv1g9izYQbLVOMIUjZivKXFt8nE9DlDc3eNryA0Q1gh6wfCzU0EC/aSAlso0vGLt/04+Drgh0ZjFJ+yuZ/NY7fRq6g7pyUT/oCYknL2R+FotEOEpbraGhQ7KmbhiXdvKaHiiFj1mXJt5Iw5XfZXu77yjIbBcKwZcsdZWHfwxEXpNO4Yaq3mDYjcLdsoOK4a9TeXAnSpgpoMrdJB6U1UHYZi7WUmnwDParhd4l6iOLP+rj1SYqhTb+7mzX4aHhFk5inSGKXVjvrEe755aDwKGWpFBDvUDPmi1iwsMdGoJED4Fq3VI9mqypuC+WV339asAZEZD6dGBsegfanwPfJdNpFs68XIQK4OedzkT6LuOhuD7tgDldK+U2QpetkvSoZyjdvlbwurgIkpNmfFGU5Fz1FNrEy8wFDol+6gFV9Miy/5GlYs1448HPK1ZfUrmB8Mg+HUZPitdFQk19LTyOKTauKA42LBxHIf/vej8DSaAyjmorRA1FooX1yT0cIShXq1XgSTuzOWhOZrGDXDkNKILEoR30hUhb6ptE6cPjPea+arS26w/EkcQSnRYIhSMhhyGUlP60itlOFQbVXIRXPvURzjcWR1PAxTJgSHUnpXwVCm3uoHEsRn3SYrnxA4GC5OzqrXOhqGJKC49RmOH8CzT/W7g9yxiHqSfjdNVGJ0oFOFDyoyXGZ7Ip07DoaYt8jcI3C6Nm/x5vF9ZhReOAQhnawohrYIJMx/5lbpvFpBzd9gGQzQC0oCsmKqvb58iVsFOuVtbdEbxw6J5O4o4iGajOyvY8Bii9yIUEsHtVYXDPUPoOgl5dogL1aOR5G1oWkV3isHcxJm5+u3LlW9RTDU+y26WsV+nMDxukzeG1d2QB8BVk5hCeC7vH5PMlev8NXvQ9CCq0XI+pyzDj34YzLkFxtBROze1747yrD1ijtgEDqYCzRLia6oe8qKgK2HKzX1Np5KdQiWNOxjKJYiJl7xJcgHjxeQzF0LKeW01I9HzOTbMd94Ju4xbKxxLJ3i28gR5Yue1NyEEYFt4u0wNFZYYl3BAPbZI8eBuVV6kTXsiSKg8fKh3GG5q2Bo9IYZL/3CUtlQ5VoB0cEqyDCl3NOY+0xSOEMR58xattlgrC0aHFb9L6pzQOrZKzGUFqTfr5TC4b9iQ7emD8l/GLJW1FE1jiNW4E8gFpMrcPMOa/M13it1BecRq2SXcjGziVpFQFCAo6h48x/bK+xjsvk6PUxaZKuClwTcUmP2GsVOLma806620/BdqLrfAGZgrsPstZfWZ92NVL4irXDOf3ln5xdA9ea+bsTE1xyc95//m2AcnK5ph3IzgrZUXipdJ8/LrLCcqWgZ6jZFTNqPwdWwFS4tvjmXiGwNlsTid0qFMIKfnke7FRVCHVb0ghBt2K375xQI39Ld+YHDILTZr9CB11i41HMcT8TudPIQDSpSTa2krlqE3FHP+3kEads99eyKnyCdpVvLcpcggvnwYbtcvrHM61Jqw3+WnSwUp+nmbpgdQeI9T16ahj/fX8XiKFzk0+w4wl+DBg0aNPhtfHoJ5rGq8YVPlZd8+wbmSdefz59vnq8+X5QO/DFu/z2rxL9wo6/i2L9/6/Gf5Xdf8NONGH1uXlKOuMAPX166/qV5yvXzWb/dQbT7p1dfDsrwc/ukEqfIUBw7NRheyu/YNM474tNX45J9/l2fMzytvn7bOOPi6bRjHOqcXR1SjodhKD4WGJ7uy/D2rFM+2Pnr6Bh2Tn6b4Xl/92jn7OLYGJ60r36T4Xn1BM4OZoyHYnhydv1bDD9XSJChcyhbVAw7RZz9KsOT0++vMmwXccZ96ZczTandBn+qrnZFDgTJsHNexDP5VYadp9cYtj9fFsF9yY26QP/k9vr68px71c6Z6ZwPwtD0FAq/xlCZYiVDJeECLpQOS0rfn9sozsP70k7nzxlKU/wFhur8vvadV/320zvEw4MwPOkzGvsz/CStsG8q5fl5xdDfx0EZclPcn+F13zzvnXBAOzwRpljJsHN1WwC72K24WPuf92d4cnJTwNdfY6id/PVL0aJTCBZcZZ5lWltppIdmWIiG/ctfYth5UnlD/9M+EV+ozJN8QO9I8IWcpv2LDG9VatK5+QWGJ/IBHT/DKx2627dS9f7PGH5X+aW84P5aWunIj44huT4rXeO1vLTPOUnBnx66clHJsMLTXItjRsKhHDx3fwZDclV6VuW89J8C2MXkKf3r8rTeg+FVAeyWMiC3jZqKjA/9T2WGyjNWMqwMCP/ItP/m/RlWRnwVrY0JyCyEjy8w/F5c6u3BUK2dTk0hXrb/rhj723gta1Np46lSU6mknWf2scCQXBe8yj6Zt/LAfb2k/+f05PSQOc5rDI0QICh+VX7jsoJh0RT3YXitwqgyxSs84fSAyferDLWjPbu6vrj4eqP0UJRRSgwLpljyNF+vi+DPzMj3ni4vLq5v2/yW7ZND12mqGX43agz9vlFjkJZZZmhGv3K06BcgpGQodqdduMXBqm2vMtyJAOXblxlqNX6rEtU5f/0Oh3OvrzP81O5U3b4tzWSHoVEc3I9hOcbIwwcrtb3BkFyUMxU2WOWRuwy1Ze3J8NNThRQ77cOtp95guJuMgQR1GaWC4V/FEPMmQ7jIzpD20wEXjG8xJF+e+gU96pwZdCoYksu9dmYMhpDaFIyhfXZ7OH7A8OwUcXb68pDrG7n11Wmftgt7X8/i7EL59px/KXfXTitR2JD79PnkVN6h37467Ir/+18Crw66vj1/vrl5vros7V/+LU4upFmfxJefzA87KGVmF5/Pb56ebs4Pv0PaAJF+O4I2tN+GHwSBj+1dPhF/Brwzkv8597HNi73pE4zECTN5Go4K4CM/kWAzrbzKC8PhWuxYIAb5JJjNAv53QkYBH8k/Hqr1bRqFYZ7BbCKSpYSM/UESTrCNEhsk880UX3TJIvichBlrYx8/hg8jEo5T9u+MrrM0IxROT0iYhinZkDH+65U+icKUDx+z4SEfHm+mm5gkKR7DGySzcBKFhGzhjv4kG6dkmKXpDGcSH+pXsDN8nMhwDGRzEvrYRDj0yTSHG+NN4FFGIXyGOYywgxJmD9+LXlmf9VQON/iAWKv6kIRwlUf227mjUAzfquGsURgb+eYhSSZ4FsH7jRYJuyk+SPbYJwGZRAdiOA2zjNEck8yfIEO4f/wN7jQm4pecB/ksI0M+fz7lNEijkJFbh48xzG0Icx3cpT6MGONV+ERRiOMZPsV0HOJ5/IeT2aUeSDSKGMMciQLPDQmyBTzNx5BMg2QcHKoXfBqDwXAZZjN/mDIZLvJ8kiULP2JD7rPpkkQzg+HYT0fceCMC/9+QwQL5zu8Yw9kwJZEvh89weMiHz1kvP5v6BP6XxWPG0F9OwwS+8YFVghfMZvmUHOrHwJAcmY+JvyHpjOQuyjB/IEPwIDCJnASDeRYEi3gEAgljNmV/EJGQ95jyZwCHxnA6au8QKcU2weH4z7Ti8G+JHE7u5mQejxJ2DBUzYgzTPJglPggQWDJezHQOxTBm946HODF4zFM/j6KM+AN+KLsPCdOsKZlHCWuEHUT448ZxxD9GADJlA+DEOfwPm6HxX3zcGc66wMMkxe5cPAaDfPgvh7vAgVFMFsl4RBYwchTP2BU/AvPjeNWzQYMGDRo0aNCgQYMGDRo0aNCgQYMGDRo0aNCgQYMGDRo0aPA/gP8Cw0rmSVtEQZ0AAAAASUVORK5CYII=">
+            
+            </div>
+            <div class="box2">
+                <br>
+                <p>
+                    Meu nome é Yalle Ramos, estudante da Funec Riacho , atualmente estou no 2 ano do ensino médio integrado, como é um ensino integral eu acabo acordando muito cedo todos os dias, já entrei aqui pensando em seguir carreira na área de informática mas como a mesma é um ramo muito grande eu não tinha me decidido sobre qual caminho seguir, e, por isso, escolhi a Funec Riacho como uma base para ajudar na minha escolha, visei claro, o histórico de formação de profissionais da escola. Ao chegar aqui presencialmente esse ano eu gostei bastante, mesmo sendo uma escola pequena ela é muito aconchegante e eu não me arrependo nem um pouco de ter escolhido esse lugar como minha segunda casa. 
+                </p>
+                
+            </div>
+    </div>
+    <div class="conjunto2">
+        <div class="box3">
+        <br>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Eu escolhi a área de TI porque eu sempre gostei de informática, 
+            meus primos já trabalham nessa área em Home Office, algo que eu 
+            penso em conseguir desde que vi meu pai perdendo um ônibus ás 
+            5:00 da manhã e não conseguiu ir para o trabalho, se eu trabalhasse 
+            em casa eu não teria de me preocupar com esse tipo de coisa, porém 
+            para conseguir isso só existem duas opções, ou trabalho na área tecnológica 
+            ou eu abro minha empresa, não nego que futuramente penso sim em consumar a 
+            segunda opção, mas o fator decisivo foi minha vontade de estudar na funec, 
+            mesmo na pandemia eu estava decidido, sabia que seria díficil, pois em meio 
+            a uma pandemia onde o cenário me obrigava a estudar pela internet, eu não 
+            tinha e continuo sem ter um computador, mas não desisti e pretendo continuar no curso. 
+        </p>
+        
+        
+        </div>
+        </div>
+
+
+
+    </div>
+</body>
+<script>
+    var header           = document.getElementById('header');
+    var navigationHeader = document.getElementById('navigation_header');
+    var content          = document.getElementById('content');
+    var showSidebar      = false;
+
+    function toggleSidebar()
+    {
+        showSidebar = !showSidebar;
+        if(showSidebar)
+        {
+            navigationHeader.style.marginLeft = '-10vw';
+            navigationHeader.style.animationName = 'showSidebar';
+            content.style.filter = 'blur(2px)';
+        }
+        else
+        {
+            navigationHeader.style.marginLeft = '-100vw';
+            navigationHeader.style.animationName = '';
+            content.style.filter = '';
+        }
+    }
+
+    function closeSidebar()
+    {
+        if(showSidebar)
+        {
+            showSidebar = true;
+            toggleSidebar();
+        }
+    }
+
+    window.addEventListener('resize', function(event) {
+        if(window.innerWidth > 768 && showSidebar) 
+        {  
+            showSidebar = true;
+            toggleSidebar();
+        }
+    });
+
+</script>
+</html>

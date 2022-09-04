@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pág(A2)</title>
+    <style>
+        :root{
+            --color-white: #fff;
+            --color-dark1: rgb(39, 39, 39);
+            --color-dark2: #2d2d2d;
+            --color-dark3: #414141;
+            --color-dark4: #001485;
+            --color-dark5: #343434;
+            --color-blue: #2f31b8;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--color-white);
+            background-image: url(https://st2.depositphotos.com/17620692/43265/v/600/depositphotos_432654516-stock-illustration-vector-abstract-science-futuristic-energy.jpg);
+            background-image: no-repeat;
+            background-position: center  0%;
+        }
+        .img_logo_header{
+            width: 45px;
+        }
+        .header,
+        .navigation_header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .header{
+            background-image: url();
+            background-image: no-repeat;
+            background-position: center  0%;
+            justify-content: space-between;
+            padding: 0 10%;
+            height: 3.5em;
+            box-shadow: 1px 1px 4px var(--color-dark4);
+        }
+        .navigation_header{
+            gap: 3em;
+            z-index: 2;
+        }
+        .content{
+            padding-top: 5em;
+            text-align: center;
+            height: 100vh;
+            transition: 1s;
+        }
+        .navigation_header a{
+            text-decoration: none;
+            color: var(--color-white);
+            transition: 1s;
+            font-weight: bold;
+        }
+        .navigation_header a:hover{
+            color: var(--color-white);
+        }
+        .active{
+            background: var(--color-blue);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn_icon_header{
+            background: transparent;
+            border: none;
+            color: var(--color-white);
+            cursor: pointer;
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .navigation_header{
+                position: absolute;
+                flex-direction: column !important;
+                top: 0;
+                background: var(--color-dark5);
+                height: 100%;
+                width: 35vw;
+                padding: 1em;
+                animation-duration: 1s;
+                margin-left: -100vw;
+            }
+            .btn_icon_header{
+                display: block;
+            }
+        }
+        @keyframes showSidebar {
+            from {margin-left: -100vw;}
+            to {margin-left: -10vw;}
+        }
+
+        .img1{
+            width: 95%;
+            height: 98%;
+        }
+         
+        .conjunto{
+            display: flex;
+            width: 100%;
+            height: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 20px;
+        }
+
+        .box1{
+            margin-left: 4px;
+            margin-top: 5px;
+            width: 48%;
+            height: 100%;
+            
+        }
+
+        .box2{
+            width: 50%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgb(53, 49, 117), rgb(28, 16, 196));
+            border-radius: 20px;
+        }
+         
+        .box3{
+            margin: auto;
+            width: 98%;
+            height: 400px;
+            background-image: linear-gradient(to right, rgb(53, 49, 117), rgb(28, 16, 196));
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <div class="logo_header">
+            <a href="login.html"><img src="mudar de conta.png" alt="Logo GN" class="img_logo_header"></a>
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <a href="#" class="active" >Tecnologia</a> 
+            <a href="pág(A2).html">Profissão</a>
+            <a href="pág(A3).html">Filme</a>
+        </div>
+    </div>
+    <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        
+<div class="conjunto">        
+        <div class="box1"> 
+            <img class="img1" src="https://cdn.icon-icons.com/icons2/1465/PNG/512/130manstudent2_100617.png">
+        </div>
+        <div class="box2">
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Olá meu nome é Caio Augusto é como vemos as informações ao lado da imagem poderá ver que eu falo que 
+                estudo na escola Funec Riacho que está localizada em Contagem, que é uma cidade muito legal de se viver,
+                agora falando da parte porque eu escolhe estudar TI é que além de criar sites e aplicativos úteis, aprender programação 
+                de computador também oferece muitos benefícios para o codificador aprimorando sua lógica e raciocínio, perseverança e 
+                habilidades de comunicação.<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Embora todos sejamos dependentes da tecnologia em nossas vidas diárias, poucas pessoas sabem ler e escrever código. Portanto, se você é 
+                um iniciante completo ou um não progarmador experiente em tecnologia, existem várias razões pelas quais você deve aprender
+                a codificar.<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;A boa notícia para os programadores de computador é que a maioria dos empregados nos quais você se interressará com suas novas 
+                habilidades paga bem. Como a tecnologia não parece que estar diminuindo tõa cedo, aprender a programar também tem a capacidadde de aumentar 
+              seu pontencial de ganhos.
+
+            </p>
+        </div>
+</div>
+<div class="conjunto">
+<div class="box3">
+<br>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;Agora falando dos benefícios de ficar próximo a tecnologia, vivemos em mundo acelerado, onde novidades surgem a todo momento e logo se tornam obsoletas. Tais inovações têm como objetivo 
+    procurar respostas para as necessidades do mercado e, principalmente, da população como um todo. Podemos dizer, então, que seus recursos prorcionam um amr de oportunidades de negócios, além de 
+    uma verdadeira revolução no que se diz respeito de qualidade de vida. Esse cenário pode ser visto no nosso peóprio corportamento, nos instrumentos de trabalho, nos meios de comunição e de aprendizado. Todas essas aréas 
+    são diferentes do que eram em um passado recente e, provalvemente, amanhã se tornarão aida mais distintas do que são hoje.<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; Por esse motivo é tão importante ficar de olho nas inúmeras oportunidades que surgem todos os dias em consequências do desnvolvimento tecnológico acelerado. Para muitos, as novas tecnologias, pprincipalamente a internet,
+    tornam tudo mais rápido, mais barato e melhor. Entretanto, há quem as veja com certo pessimo, como se os problemas da nossa sociedade tivessem ficado ainda maior, como se as redes sociais tivessem nos separado ainda mais.<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;A verdade é que a dominância do High-tech está mudando muita coisa e seus benefícios está mudando muita coisa e seus benefícios se estendem a cada um dos setores sociais, desde área empresarial até o setor da saúde. 
+
+</p>
+
+
+</div>
+</div>
+    </div>
+</body>
+<script>
+    var header           = document.getElementById('header');
+    var navigationHeader = document.getElementById('navigation_header');
+    var content          = document.getElementById('content');
+    var showSidebar      = false;
+
+    function toggleSidebar()
+    {
+        showSidebar = !showSidebar;
+        if(showSidebar)
+        {
+            navigationHeader.style.marginLeft = '-10vw';
+            navigationHeader.style.animationName = 'showSidebar';
+            content.style.filter = 'blur(2px)';
+        }
+        else
+        {
+            navigationHeader.style.marginLeft = '-100vw';
+            navigationHeader.style.animationName = '';
+            content.style.filter = '';
+        }
+    }
+
+    function closeSidebar()
+    {
+        if(showSidebar)
+        {
+            showSidebar = true;
+            toggleSidebar();
+        }
+    }
+
+    window.addEventListener('resize', function(event) {
+        if(window.innerWidth > 768 && showSidebar) 
+        {  
+            showSidebar = true;
+            toggleSidebar();
+        }
+    });
+
+</script>
+</html>

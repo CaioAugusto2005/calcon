@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.grid {
+    display: grid;
+    grid-template-columns: 400px 920px;
+    column-gap: 20px;
+}
+
+.grid1{
+    display: grid;
+    grid-template-columns:0;
+    column-gap: 20px;
+}
+
+#div1,
+#div2
+ {
+    border: 2px solid black;
+    height: 400px;
+}
+
+#div3{
+    border: 2px solid black;
+    height: 400px;
+    width: 1335px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+            .grid, #div3{
+                display: block;
+                float: right;
+                height: 600px;
+                width: 100%;
+                top: 1px;
+                margin-top: 5px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #div2{
+                display: block;
+                float: right;
+                height: 650px;
+                width: 100%;
+                top: 1px;
+                margin-top: 5px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #div3{
+                display: block;
+                float: right;
+                height: 900px;
+                width: 100%;
+                top: 1px;
+                margin-top: 5px;
+            }
+        }
+#img1{
+    width: 250px;
+    height: 250px;
+    margin-top: 5px;
+}        
+
+.box1{
+    text-align: center;
+}
+.p1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.p2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div id="div1">
+        <div class="box1"><img id="img1" src="estudante.png" alt="estudante">
+            <p class="p1">Estudante da Escola Funec Riacho<br>
+                Ensino Médio Técnico Integral
+             </p></div>
+        </div>
+        <div id="div2"><p class="p2"> Olá meu nome é Caio Augusto é como vemos as informações ao lado da imagem poderá ver que eu falo que 
+                          estudo na escola Funec Riacho que está localizada em Contagem, que é uma cidade muito legal de se viver,
+                          agora falando da parte porque eu escolhe estudar TI é que além de criar sites e aplicativos úteis, aprender programação 
+                          de computador também oferece muitos benefícios para o codificador aprimorando sua lógica e raciocínio, perseverança e 
+                          habilidades de comunicação.<br><br>
+                          Embora todos sejamos dependentes da tecnologia em nossas vidas diárias, poucas pessoas sabem ler e escrever código. Portanto, se você é 
+                          um iniciante completo ou um não progarmador experiente em tecnologia, existem várias razões pelas quais você deve aprender
+                          a codificar.<br><br>
+                          A boa notícia para os programadores de computador é que a maioria dos empregados nos quais você se interressará com suas novas 
+                          habilidades paga bem. Como a tecnologia não parece que estar diminuindo tõa cedo, aprender a programar também tem a capacidadde de aumentar 
+                        seu pontencial de ganhos.</p></div>
+        <div id="div3"><p class="p2">Agora falando dos benefícios de ficar próximo a tecnologia, vivemos em mundo acelerado, onde novidades surgem a todo momento e logo se tornam obsoletas. Tais inovações têm como objetivo 
+                        procurar respostas para as necessidades do mercado e, principalmente, da população como um todo. Podemos dizer, então, que seus recursos prorcionam um amr de oportunidades de negócios, além de 
+                        uma verdadeira revolução no que se diz respeito de qualidade de vida. Esse cenário pode ser visto no nosso peóprio corportamento, nos instrumentos de trabalho, nos meios de comunição e de aprendizado. Todas essas aréas 
+                        são diferentes do que eram em um passado recente e, provalvemente, amanhã se tornarão aida mais distintas do que são hoje.<br><br>
+                        Por esse motivo é tão importante ficar de olho nas inúmeras oportunidades que surgem todos os dias em consequências do desnvolvimento tecnológico acelerado. Para muitos, as novas tecnologias, pprincipalamente a internet,
+                        tornam tudo mais rápido, mais barato e melhor. Entretanto, há quem as veja com certo pessimo, como se os problemas da nossa sociedade tivessem ficado ainda maior, como se as redes sociais tivessem nos separado ainda mais.<br><br>
+                        A verdade é que a dominância do High-tech está mudando muita coisa e seus benefícios está mudando muita coisa e seus benefícios se estendem a cada um dos setores sociais, desde área empresarial até o setor da saúde. 
+
+        </p></div>
+    </div>
+
+    
+    
+    
+    
+</body>
+
+</html>

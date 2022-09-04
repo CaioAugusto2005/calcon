@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pág(A2)</title>
+    <style>
+        :root{
+            --color-white: #fff;
+            --color-dark1: rgb(39, 39, 39);
+            --color-dark2: #2d2d2d;
+            --color-dark3: #414141;
+            --color-dark4: #0eb308;
+            --color-dark5: #343434;
+            --color-green: rgb(43, 129, 43);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://i.pinimg.com/originals/f7/8b/32/f78b3265a421a013bd6c6ef9e4f288c6.jpg);
+            background-image: no-repeat;
+            background-position: center  0%;
+        }
+        .img_logo_header{
+            width: 45px;
+        }
+        .header,
+        .navigation_header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .header{
+            background-image: url();
+            background-image: no-repeat;
+            background-position: center  0%;
+            justify-content: space-between;
+            padding: 0 10%;
+            height: 3.5em;
+            box-shadow: 1px 1px 4px var(--color-dark4);
+        }
+        .navigation_header{
+            gap: 3em;
+            z-index: 2;
+        }
+        .content{
+            padding-top: 5em;
+            text-align: center;
+            height: 100vh;
+            transition: 1s;
+        }
+        .navigation_header a{
+            text-decoration: none;
+            color: var(--color-white);
+            transition: 1s;
+            font-weight: bold;
+        }
+        .navigation_header a:hover{
+            color: var(--color-white);
+        }
+        .active{
+            background: var(--color-green);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn_icon_header{
+            background: transparent;
+            border: none;
+            color: var(--color-white);
+            cursor: pointer;
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .navigation_header{
+                position: absolute;
+                flex-direction: column !important;
+                top: 0;
+                background: var(--color-dark5);
+                height: 100%;
+                width: 35vw;
+                padding: 1em;
+                animation-duration: 1s;
+                margin-left: -100vw;
+            }
+            .btn_icon_header{
+                display: block;
+            }
+        }
+        @keyframes showSidebar {
+            from {margin-left: -100vw;}
+            to {margin-left: -10vw;}
+        }
+
+        .img1{
+            width: 95%;
+            height: 98%;
+        }
+         
+        .conjunto{
+            display: flex;
+            width: 100%;
+            height: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 20px;
+        }
+
+        .box1{
+            margin-left: 4px;
+            margin-top: 5px;
+            width: 48%;
+            height: 100%;
+            
+        }
+
+        .box2{
+            width: 50%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgb(28, 128, 69), rgb(4, 196, 84));
+            border-radius: 20px;
+        }
+         
+        .box3{
+            margin: auto;
+            width: 98%;
+            height: 400px;
+            background-image: linear-gradient(to right, rgb(28, 128, 69), rgb(4, 196, 84));
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <div class="logo_header">
+            <a href="login.html"><img src="mudar de conta.png" alt="Logo GN" class="img_logo_header"></a>
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <a href="home(A1).html" >Tecnologia</a> 
+            <a href="#" class="active">Profissão</a>
+            <a href="pág(A3).html">Filme</a>
+        </div>
+    </div>
+    <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        
+<div class="conjunto">        
+        <div class="box1"> 
+            <img class="img1" src="https://img.freepik.com/fotos-gratis/tela-digital-com-ambiente-dia_23-2148884835.jpg?w=360">
+        </div>
+        <div class="box2">
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;O meu sonho é se tornar um engenheiro ambiental, ao contrário das &nbsp;engenharias mais tradicionais, como mecânica, civil e elétrica, a &nbsp;engenharia ambiental tem a vantagem de proporcionar uma formação &nbsp;híbrida ao concluinte do curso. Ou seja, nessa graduação, o estudante tem &nbsp;contato tanto com matérias fundamentais à qualificação do engenheiro, &nbsp;como cálculo, física e estatística, por exemplo, quanto com disciplinas que &nbsp;envolvem biologia, química e ecologia.
+                                       <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;A formação híbrida fornecida pelo curso possibilita ao engenheiro &nbsp;ambiental identificar, manejar e solucionar problemas de caráter ambiental. &nbsp;Ele atua sobre os desequilíbrios no ecossistema de certa região, a &nbsp;extração inadequada de recursos naturais e a emissão de poluentes. Além &nbsp;disso, projeta sistemas de gestão e tratamento de resíduos, planeja redes &nbsp;de saneamento bem como avalia riscos e compensações ambientais &nbsp;diversas.
+                                       <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Na base do trabalho do engenheiro ambiental está a busca pela &nbsp;sustentabilidade, isto é, o desenvolvimento social e econômico em &nbsp;equilíbrio com o meio ambiente. Para ser capaz de agir nesse sentido, o &nbsp;profissional.
+            </p>
+        </div>
+</div>
+<div class="conjunto">
+<div class="box3">
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Preservar o meio ambiente é fundamental, afinal, é nele onde estão os recursos naturais necessários para a nossa sobrevivência, como água, &nbsp;alimentos e matérias-primas. Sem esses recursos, todas as formas de vida do planeta poderão acabar.
+    Conscientizar as pessoas a respeito disso é &nbsp;tão importante quanto difícil e em Várzea Paulista cabe à Unidade Gestora de Meio Ambiente coordenar esse trabalho. “A maior dificuldade da &nbsp;conscientização sobre a importância de preservação do meio ambiente é a sensação de que isso não é urgente e não nos afeta de imediato, o que &nbsp;é uma visão equivocada. Qualquer ação de degradação ambiental pode ser sentida de imediato, pois a resposta da natureza acontece &nbsp;rapidamente”. Disse João de Lima, gestor municipal de Meio Ambiente. 
+    Tendo como objetivo elaborar e gerir um código ambiental municipal que &nbsp;contemple as necessidades de desenvolvimento do município seguindo e respeitando diretrizes que preservem nossos recursos naturais, além de &nbsp;realizar ações de fiscalização, conscientização e educação ambientais, a Unidade Gestora do Meio Ambiente vem executando uma série de ações &nbsp;pela cidade, resultando em avanços significativos na preservação ambiental.
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Você pode ajudar o meio ambiente de várias forma com separar o lixo orgânico do reciclável é essencial para garantir a destinação correta de &nbsp;pcada produto. Reciclar um produto é muito melhor para o meio ambiente que fabricar outro, uma vez que economizamos recursos naturais e &nbsp;pdiminuímos o lixo no planeta.
+Evite o uso de produtos descartáveis e sacolas plásticas o uso desses produtos, apesar de bastante prático, &nbsp;contribui para o aumento da produção de lixo. No que diz respeito ao uso de sacolas plásticas, ao fazer compras, leve sua própria bolsa de pano ou &nbsp;plona para evitar desperdícios 
+entre outras maneira mas tudo depende você.
+</p>
+
+
+</div>
+</div>
+    </div>
+</body>
+<script>
+    var header           = document.getElementById('header');
+    var navigationHeader = document.getElementById('navigation_header');
+    var content          = document.getElementById('content');
+    var showSidebar      = false;
+
+    function toggleSidebar()
+    {
+        showSidebar = !showSidebar;
+        if(showSidebar)
+        {
+            navigationHeader.style.marginLeft = '-10vw';
+            navigationHeader.style.animationName = 'showSidebar';
+            content.style.filter = 'blur(2px)';
+        }
+        else
+        {
+            navigationHeader.style.marginLeft = '-100vw';
+            navigationHeader.style.animationName = '';
+            content.style.filter = '';
+        }
+    }
+
+    function closeSidebar()
+    {
+        if(showSidebar)
+        {
+            showSidebar = true;
+            toggleSidebar();
+        }
+    }
+
+    window.addEventListener('resize', function(event) {
+        if(window.innerWidth > 768 && showSidebar) 
+        {  
+            showSidebar = true;
+            toggleSidebar();
+        }
+    });
+
+</script>
+</html>

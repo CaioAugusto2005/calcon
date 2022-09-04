@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Js</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0);
+            color: white;
+        }
+        
+        form {
+            width: 300px;
+            margin: 200px auto;
+            text-align: center;
+        }
+        
+        input {
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 30px;
+        }
+        
+        h3 {
+            font-size: 25px;
+            color: aquamarine;
+        }
+        
+        #login {
+            border-color: aquamarine;
+        }
+        
+        .submit {
+            background-color: rgb(32, 148, 109);
+            width: 95%;
+            border: none;
+            padding: 1px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        
+        fieldset {
+            border: aquamarine 1px solid;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <form>
+        <fieldset>
+            <h3>Login</h3>
+            <input type="text" placeholder="login" id="login">
+            <input type="password" type="hidden" placeholder="senha" id="senha">
+            <input type="submit" onclick="logar(); return false" class="submit">
+        </fieldset>
+    </form>
+
+    <script>
+        function logar() {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if (login == "Caio" && senha == "Caio") {
+                alert('sucesso, Muito Bem Vindo Caio');
+                location.href = "home(A1).html";
+            } else if (login == "Yalle" && senha == "Ferrari") {
+                alert('sucesso, Muito Bem Vindo Yalle');
+                location.href = "home(B1).html";
+            } else if (login == "Samuel Dias" && senha == "Samuel Dias") {
+                alert('sucesso, Muito Bem Vindo Samuel Dias');
+                location.href = "home(C1).html";
+            } else if (login == "Arthur Viana" && senha == "Arthur Viana") {
+                alert('sucesso, Muito Bem Vindo Viana');
+                location.href = "home(D1).html";
+            } else {
+                alert('Usuario ou senha incorretos');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
